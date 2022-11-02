@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waroenk Apabe</title>
+  <link rel="icon" href="Waroenk apabe.png" type="image/icon" sizes="16x16" <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="loading">
+      <img src="loading.gif" width="100">
+      <div class="loading-text">
+        <marquee berhavior='alternate'>Harap Tunggu Kawan</marquee>
+      </div>
+    </div>
+  </div>
+  <section class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="basreng.jpeg" alt="card image" />
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Basreng</span>
+          <span class="card__name">baso digoreng</span>
+
+          <p class="card__text">
+            Bakso ikan yang digoreng kering dan ditaburi bubuk cabai. dapatkan sensasi pedas tak terhingga hingga semampoes
+            mampoesnya.
+          </p>
+          <span class="card__title"><b>5K</b></span>
+        </div>
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="capcin.jpeg" alt="card image" />
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Capcin</span>
+          <span class="card__name">kapucino cincau</span>
+          <p class="card__text">
+            Minuman dingin yang mampu membuat anda merasakan terbang hingga ke langit setelah tegukan pertama.
+          </p>
+          <span class="card__title"><b>7K</b></span>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    $(document).ready(function(){
+    $(".preloader").fadeOut();
+    })
+
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+</body>
+
+</html>
