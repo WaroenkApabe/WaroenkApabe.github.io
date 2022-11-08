@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Waroenk Apabe</title>
-  <link rel="icon" href="Waroenk apabe.png" type="image/icon" sizes="16x16" <!-- Link Swiper's CSS -->
+  <link rel="icon" href="Waroenk apabe.png" type="image/icon" sizes="16x16" <!-- link swiper js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 
@@ -15,45 +15,39 @@
 </head>
 
 <body>
-  <div class="preloader">
-    <div class="loading">
-      <img src="loading.gif" width="100">
-      <div class="loading-text">
-        <marquee berhavior='alternate'>Harap Tunggu Kawan</marquee>
-      </div>
-    </div>
-  </div>
   <section class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="card swiper-slide">
-        <div class="card__image">
-          <img src="basreng.jpeg" alt="card image" />
-        </div>
-
+        <picture>
+          <div class="card__image">
+            <img src="pudot.webp" alt="ice cream durian" />
+          </div>
+        </picture>
         <div class="card__content">
-          <span class="card__title">Basreng</span>
-          <span class="card__name">baso digoreng</span>
-
+          <span class="card__title">Ice Cream</span>
+          <span class="card__name"><b>Rasa </b>: Durian</span>
           <p class="card__text">
-            Bakso ikan yang digoreng kering dan ditaburi bubuk cabai. dapatkan sensasi pedas tak terhingga hingga semampoes
-            mampoesnya.
+            Merupakan es krim rasa durian yang sangat khas dengan ekstrak durian yang sangat terasa dalam balutan krim
+            es yang beku.
           </p>
           <span class="card__title"><b>5K</b></span>
         </div>
       </div>
 
       <div class="card swiper-slide">
-        <div class="card__image">
-          <img src="capcin.jpeg" alt="card image" />
-        </div>
-
+        <picture>
+          <div class="card__image">
+            <img src="pudding sedot.webp" alt="puding sedot" />
+          </div>
+        </picture>
         <div class="card__content">
-          <span class="card__title">Capcin</span>
-          <span class="card__name">kapucino cincau</span>
+          <span class="card__title">Pudot</span>
+          <span class="card__name">puding sedot</span>
           <p class="card__text">
-            Minuman dingin yang mampu membuat anda merasakan terbang hingga ke langit setelah tegukan pertama.
+            Pudot atau puding sedot adalah puding silky dengan berbagai rasa yang dibuat lebih encer sehingga mudah
+            disedot menggunakan sedotan.
           </p>
-          <span class="card__title"><b>7K</b></span>
+          <span class="card__title"><b>3K</b></span>
         </div>
       </div>
     </div>
@@ -65,9 +59,23 @@
 
   <!-- Initialize Swiper -->
   <script>
-    $(document).ready(function(){
-    $(".preloader").fadeOut();
-    })
+    onload = () => {
+      //declare loading
+      let id = document.getElementById("app");
+      let loading = document.createElement("div");
+
+      //fil content
+      loading.textContent = "Loading";
+      loading.style.fontSize = "28px";
+      id.appendChild(loading);
+
+      //set Interval
+      let loaded = setInterval(() => {
+        loading.textContent = loading.textContent + ".";
+      }, 1000);
+
+      clearInterval(loaded);
+    };
 
     var swiper = new Swiper(".mySwiper", {
       effect: "coverflow",
